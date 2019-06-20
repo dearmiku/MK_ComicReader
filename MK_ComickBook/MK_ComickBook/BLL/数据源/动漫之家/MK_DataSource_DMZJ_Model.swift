@@ -42,6 +42,11 @@ extension MK_DataSource_DMZJ_BookModel : HandyJSON {
 
 
 extension MK_DataSource_DMZJ_BookModel : MK_DataSource_ComickBookInfo_Protocol {
+    
+    var sourceType: MK_DataSource.DataSourceType {
+        return .DMZJ
+    }
+    
     var bookAuthor: String {
         guard let dic = authors.first,
             let name = dic["tag_name"] as? String else {

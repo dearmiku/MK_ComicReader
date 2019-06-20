@@ -16,6 +16,9 @@ enum MK_DataSource_DMZJ_Target {
     ///获取漫画详情
     case getComickInfo(String)
     
+    ///获取图片(图片URL)
+    case getImage(String)
+    
 }
 
 
@@ -27,6 +30,11 @@ extension MK_DataSource_DMZJ_Target : TargetType {
         ///获取漫画详情
         case .getComickInfo(_):
             return URL.init(string: "http://v3api.dmzj.com/")!
+            
+        ///获取图片URL
+        case let .getImage(urlStr):
+            return URL.init(string: urlStr) ??  URL.init(string: "http://v3api.dmzj.com/")!
+            
         }
     }
     
@@ -37,6 +45,9 @@ extension MK_DataSource_DMZJ_Target : TargetType {
         case let .getComickInfo(bookId):
             
             return "comic/\(bookId).json"
+            
+        case .getImage(_):
+            return ""
         }
     }
     
@@ -45,6 +56,9 @@ extension MK_DataSource_DMZJ_Target : TargetType {
             
         ///获取漫画详情
         case .getComickInfo(_):
+            return .get
+            
+        case .getImage(_):
             return .get
         }
     }
@@ -62,11 +76,19 @@ extension MK_DataSource_DMZJ_Target : TargetType {
                 "channel":"ios",
                 "version":"2.5.6"
                 ], encoding: URLEncoding.default)
+            
+        case .getImage(_):
+            return Task.requestParameters(parameters: [:], encoding: URLEncoding.default)
+            
         }
     }
     
     var headers: [String : String]? {
         switch self {
+        case .getImage(_):
+            return [
+                "Referer":"http://imgsmall.dmzj.com/"
+            ]
         default:
             return nil
         }

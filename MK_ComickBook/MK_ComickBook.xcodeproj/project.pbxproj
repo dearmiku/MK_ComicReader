@@ -201,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				0E05246122BA1B160040B12E /* MK_ComickInfoVC.swift */,
+				0E05246C22BB30F40040B12E /* 漫画话列表展示 */,
 				0E05246922BA348B0040B12E /* 漫画书信息展示 */,
 			);
 			path = "漫画详情";
@@ -212,6 +213,13 @@
 				0E05246A22BA34A50040B12E /* MK_ComickI_BookInfoV.swift */,
 			);
 			path = "漫画书信息展示";
+			sourceTree = "<group>";
+		};
+		0E05246C22BB30F40040B12E /* 漫画话列表展示 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "漫画话列表展示";
 			sourceTree = "<group>";
 		};
 		8AC905B6F58CA4D156B6A5B7 /* Frameworks */ = {

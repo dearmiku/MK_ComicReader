@@ -31,6 +31,10 @@ protocol MK_DataSource_ComickBookInfo_Protocol {
     ///集数组
     var bookPartArray:[MK_DataSource_ComickPartInfo_Protocol] {get}
     
+    
+    ///漫画源
+    var sourceType:MK_DataSource.DataSourceType {get}
+    
 }
 
 

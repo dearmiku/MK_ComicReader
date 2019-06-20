@@ -33,7 +33,7 @@ class MK_DataSource {
     ///漫画书信息Action(数据源类型,id)
     lazy var comicBookInfoAction = {
         
-        Action<(DataSourceType,String),MK_DataSource_ComickBookInfo_Protocol?>.init(workFactory: {[weak self] (para) -> Observable<MK_DataSource_ComickBookInfo_Protocol?> in
+       return Action<(DataSourceType,String),MK_DataSource_ComickBookInfo_Protocol?>.init(workFactory: {[weak self] (para) -> Observable<MK_DataSource_ComickBookInfo_Protocol?> in
             guard let sf = self else {
                 return Observable<MK_DataSource_ComickBookInfo_Protocol?>.just(nil)
             }
@@ -53,8 +53,28 @@ class MK_DataSource {
     }()
     
     
+    
+    ///获取漫画的Image
+    lazy var comicImageAction = {
+        return Action<(DataSourceType,String),UIImage?>.init {[weak self] (para) -> Observable<UIImage?> in
+            guard let sf = self else {
+                return Observable<UIImage?>.just(nil)
+            }
+            let (sourceType,urlStr) = para
+            switch sourceType {
+            ///动漫之家
+            case .DMZJ:
+                return sf.dmzjSource.imageGetAction.execute(urlStr)
+                
+            }
+        }
+    }()
+    
+    
     init(){
 
+ 
+        
     }
     
 }

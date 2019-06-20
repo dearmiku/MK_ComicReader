@@ -7,6 +7,7 @@
 //
 
 import Moya
+import UIKit
 import Action
 import RxSwift
 
@@ -40,9 +41,28 @@ class MK_DataSource_DMZJ {
     }()
     
     
+    ///图片获取Action
+    lazy var imageGetAction = { () -> Action<String, UIImage?> in
+
+        let res = Action<String,UIImage?>.init(workFactory: {[weak self] (imageURLStr) -> Observable<UIImage?> in
+
+            guard let sf = self else {
+                return Observable<UIImage?>.just(nil)
+            }
+            return sf.provider.rx
+                .request(MK_DataSource_DMZJ_Target.getImage(imageURLStr)).mapImage()
+                .map { (image) -> UIImage? in
+                return image
+            }.asObservable()
+
+        })
+        return res
+    }()
+    
     
     init(){
      
+        
         
         
     }
