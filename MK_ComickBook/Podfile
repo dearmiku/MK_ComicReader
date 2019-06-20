@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MK_ComickBook' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  
+  use_frameworks!
+  inhibit_all_warnings!
+  
+  #响应式函数框架
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Action'
+  
+  #布局框架
+  pod 'SnapKit'
+  
+  #网络框架
+  pod 'Moya'
+  pod 'Moya/RxSwift'
+  
+  
+  # 数据库框架
+  pod 'WCDB.swift'
+  
+  #ORM框架
+  pod 'HandyJSON'
+  
+  #图片下载与缓存
+  pod 'Kingfisher'
+  
+
+  # Pods for MK_ComickBook
+
+end
