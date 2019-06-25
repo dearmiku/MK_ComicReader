@@ -19,7 +19,12 @@ class MK_ComickInfoVC : MK_BaseVC {
         return res
     }()
     
-    
+    ///漫画<话>详情
+    lazy var partInfoV = { () -> MK_ComicPartV in
+        let res = MK_ComicPartV()
+        view.addSubview(res)
+        return res
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +37,19 @@ class MK_ComickInfoVC : MK_BaseVC {
             make.left.right.equalToSuperview()
             make.height.equalTo(260)
         }
+        partInfoV.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(bookInfoV.snp.bottom)
+        }
+        
         
         MK_DataSource.share().comicBookInfoAction
             .execute((MK_DataSource.DataSourceType.DMZJ, "39033"))
             .subscribe(onNext: {[weak self] (res) in
+                
                 guard let sf = self else {return}
                 sf.bookInfoV.model.value = res
-                
+                sf.partInfoV.modelV.value = res
             }).disposed(by: bag)
         
     }

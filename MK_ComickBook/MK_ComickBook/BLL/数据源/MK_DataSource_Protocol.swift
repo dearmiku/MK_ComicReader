@@ -10,7 +10,7 @@ import Foundation
 
 /*
  数据源协议
-*/
+ */
 
 
 /// 漫画详情数据协议
@@ -43,5 +43,8 @@ protocol MK_DataSource_ComickPartInfo_Protocol {
     
     ///话 标题
     var partTitle:String {get}
+    
+    ///获取漫画该<话>图片url数组
+    func getPartImageUrlStrArr(block: @escaping (([String]?)->()))
     
 }

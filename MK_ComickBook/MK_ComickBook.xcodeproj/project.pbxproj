@@ -25,6 +25,12 @@
 		0E05246622BA1C7A0040B12E /* MK_DataSource_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05246522BA1C7A0040B12E /* MK_DataSource_Protocol.swift */; };
 		0E05246822BA204A0040B12E /* MK_DataSource_DMZJ_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05246722BA204A0040B12E /* MK_DataSource_DMZJ_Model.swift */; };
 		0E05246B22BA34A50040B12E /* MK_ComickI_BookInfoV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05246A22BA34A50040B12E /* MK_ComickI_BookInfoV.swift */; };
+		0E05248822BB58020040B12E /* MK_ComicPartV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05248722BB58020040B12E /* MK_ComicPartV.swift */; };
+		0E05248A22BB587C0040B12E /* MK_ComicPartContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05248922BB587C0040B12E /* MK_ComicPartContentV.swift */; };
+		0E8BEA3E22C095D5004D7D50 /* MK_ComicReadContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BEA3D22C095D5004D7D50 /* MK_ComicReadContentV.swift */; };
+		0E8BEA4122C095FE004D7D50 /* MK_ComicReadStateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BEA4022C095FE004D7D50 /* MK_ComicReadStateBar.swift */; };
+		0EF66F2022BB6BB0004C36BD /* MK_ComicPartToolV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF66F1F22BB6BB0004C36BD /* MK_ComicPartToolV.swift */; };
+		0EF66F2322BC64CA004C36BD /* MK_ComicReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF66F2222BC64CA004C36BD /* MK_ComicReadVC.swift */; };
 		CC4A2428D7CE7AA01DCEFE43 /* Pods_MK_ComickBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3056D1BD60C5BC2ACA75784 /* Pods_MK_ComickBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +55,12 @@
 		0E05246522BA1C7A0040B12E /* MK_DataSource_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_DataSource_Protocol.swift; sourceTree = "<group>"; };
 		0E05246722BA204A0040B12E /* MK_DataSource_DMZJ_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_DataSource_DMZJ_Model.swift; sourceTree = "<group>"; };
 		0E05246A22BA34A50040B12E /* MK_ComickI_BookInfoV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComickI_BookInfoV.swift; sourceTree = "<group>"; };
+		0E05248722BB58020040B12E /* MK_ComicPartV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComicPartV.swift; sourceTree = "<group>"; };
+		0E05248922BB587C0040B12E /* MK_ComicPartContentV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComicPartContentV.swift; sourceTree = "<group>"; };
+		0E8BEA3D22C095D5004D7D50 /* MK_ComicReadContentV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MK_ComicReadContentV.swift; sourceTree = "<group>"; };
+		0E8BEA4022C095FE004D7D50 /* MK_ComicReadStateBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComicReadStateBar.swift; sourceTree = "<group>"; };
+		0EF66F1F22BB6BB0004C36BD /* MK_ComicPartToolV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComicPartToolV.swift; sourceTree = "<group>"; };
+		0EF66F2222BC64CA004C36BD /* MK_ComicReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK_ComicReadVC.swift; sourceTree = "<group>"; };
 		8A160ECBED8C70354034DC09 /* Pods-MK_ComickBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MK_ComickBook.release.xcconfig"; path = "Target Support Files/Pods-MK_ComickBook/Pods-MK_ComickBook.release.xcconfig"; sourceTree = "<group>"; };
 		CE4DFA473D55E35A68CECBBD /* Pods-MK_ComickBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MK_ComickBook.debug.xcconfig"; path = "Target Support Files/Pods-MK_ComickBook/Pods-MK_ComickBook.debug.xcconfig"; sourceTree = "<group>"; };
 		F3056D1BD60C5BC2ACA75784 /* Pods_MK_ComickBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MK_ComickBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +157,7 @@
 		0E05244222BA0C290040B12E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0EF66F2122BC64B2004C36BD /* 漫画阅读器 */,
 				0E05246022BA1B040040B12E /* 漫画详情 */,
 				0E05244D22BA0C6B0040B12E /* 首页 */,
 				0E05244322BA0C290040B12E /* 启动 */,
@@ -218,8 +231,37 @@
 		0E05246C22BB30F40040B12E /* 漫画话列表展示 */ = {
 			isa = PBXGroup;
 			children = (
+				0E05248722BB58020040B12E /* MK_ComicPartV.swift */,
+				0E05248922BB587C0040B12E /* MK_ComicPartContentV.swift */,
+				0EF66F1F22BB6BB0004C36BD /* MK_ComicPartToolV.swift */,
 			);
 			path = "漫画话列表展示";
+			sourceTree = "<group>";
+		};
+		0E8BEA3C22C095D5004D7D50 /* 内容视图 */ = {
+			isa = PBXGroup;
+			children = (
+				0E8BEA3D22C095D5004D7D50 /* MK_ComicReadContentV.swift */,
+			);
+			path = "内容视图";
+			sourceTree = "<group>";
+		};
+		0E8BEA3F22C095E9004D7D50 /* 状态栏 */ = {
+			isa = PBXGroup;
+			children = (
+				0E8BEA4022C095FE004D7D50 /* MK_ComicReadStateBar.swift */,
+			);
+			path = "状态栏";
+			sourceTree = "<group>";
+		};
+		0EF66F2122BC64B2004C36BD /* 漫画阅读器 */ = {
+			isa = PBXGroup;
+			children = (
+				0EF66F2222BC64CA004C36BD /* MK_ComicReadVC.swift */,
+				0E8BEA3F22C095E9004D7D50 /* 状态栏 */,
+				0E8BEA3C22C095D5004D7D50 /* 内容视图 */,
+			);
+			path = "漫画阅读器";
 			sourceTree = "<group>";
 		};
 		8AC905B6F58CA4D156B6A5B7 /* Frameworks */ = {
@@ -385,6 +427,7 @@
 				0E05246422BA1B8E0040B12E /* MK_DataSource.swift in Sources */,
 				0E05244922BA0C290040B12E /* MK_Device.swift in Sources */,
 				0E05244F22BA0C750040B12E /* MK_HomePage.swift in Sources */,
+				0E05248A22BB587C0040B12E /* MK_ComicPartContentV.swift in Sources */,
 				0E05245422BA151D0040B12E /* UIView+Extension.swift in Sources */,
 				0E05245322BA151D0040B12E /* UICOlorExtension.swift in Sources */,
 				0E05246B22BA34A50040B12E /* MK_ComickI_BookInfoV.swift in Sources */,
@@ -393,9 +436,14 @@
 				0E05245F22BA18420040B12E /* MK_DataSource_DMZJ_Target.swift in Sources */,
 				0E05245D22BA17C00040B12E /* MK_DataSource_DMZJ.swift in Sources */,
 				0E05246622BA1C7A0040B12E /* MK_DataSource_Protocol.swift in Sources */,
+				0E05248822BB58020040B12E /* MK_ComicPartV.swift in Sources */,
 				0E05244C22BA0C420040B12E /* Define.swift in Sources */,
 				0E05246222BA1B160040B12E /* MK_ComickInfoVC.swift in Sources */,
 				0E05244622BA0C290040B12E /* MK_BaseVC.swift in Sources */,
+				0E8BEA3E22C095D5004D7D50 /* MK_ComicReadContentV.swift in Sources */,
+				0E8BEA4122C095FE004D7D50 /* MK_ComicReadStateBar.swift in Sources */,
+				0EF66F2322BC64CA004C36BD /* MK_ComicReadVC.swift in Sources */,
+				0EF66F2022BB6BB0004C36BD /* MK_ComicPartToolV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
